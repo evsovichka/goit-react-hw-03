@@ -6,7 +6,7 @@ export default function SearchBox({ inputValue, onSearch }) {
   };
   return (
     <div className={style.searchBox}>
-      <label htmlFor="3">Find contacts by name</label>
+      <label htmlFor="3">Find contacts by name:</label>
       <input type="text" value={inputValue} onChange={handlSearch} id="3" />
     </div>
   );

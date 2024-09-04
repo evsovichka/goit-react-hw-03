@@ -43,18 +43,28 @@ export default function ContactForm({ onAdd }) {
       onSubmit={handleSubmit}
       validationSchema={AddFormSchema}
     >
-      <Form>
-        <div className={style.name}>
-          <label htmlFor={nameFieldId}>Name</label>
-          <Field type="text" name="name" id={nameFieldId} />
-          <ErrorMessage name="name" component="span" />
+      <Form className={style.form}>
+        <div className={style.field}>
+          <div className={style.data}>
+            <label htmlFor={nameFieldId}>Name</label>
+            <Field type="text" name="name" id={nameFieldId} />
+          </div>
+          <ErrorMessage className={style.error} name="name" component="span" />
         </div>
-        <div>
-          <label htmlFor={numberFieldId}>Number</label>
-          <Field type="text" name="number" id={numberFieldId} />
-          <ErrorMessage name="number" component="span" />
+        <div className={style.field}>
+          <div className={style.data}>
+            <label htmlFor={numberFieldId}>Number</label>
+            <Field type="text" name="number" id={numberFieldId} />
+          </div>
+          <ErrorMessage
+            name="number"
+            component="span"
+            className={style.error}
+          />
         </div>
-        <button type="submit">Add contact</button>
+        <button className={style.btn} type="submit">
+          Add contact
+        </button>
       </Form>
     </Formik>
   );

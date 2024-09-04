@@ -32,7 +32,7 @@ function App() {
   );
 
   return (
-    <div>
+    <div className="box">
       <h1>Phonebook</h1>
       <ContactForm onAdd={addContact} />
       {contacts.length > 1 && (
