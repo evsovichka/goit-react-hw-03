@@ -1,0 +1,19 @@
+.contactDate {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.deleteBtn {
+  height: 30px;
+  padding: 8px;
+  align-items: center;
+  border: none;
+}
